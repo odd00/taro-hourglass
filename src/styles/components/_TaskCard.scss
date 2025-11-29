@@ -1,0 +1,48 @@
+.task-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: $spacing-base;
+  margin-bottom: $spacing-small;
+  background-color: $color-background-card;
+  box-shadow: $box-shadow-base;
+
+  border-radius: $border-radius-base;
+  transition: transform 0.1s ease;
+
+  &:active {
+    transform: scale(0.99);
+  }
+}
+
+.task-card__name {
+  flex-grow: 1;
+  font-size: $font-size-base;
+  color: $color-text-main;
+  font-weight: $font-weight-bold;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: $spacing-base;
+}
+
+.task-card__time-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  min-width: $size-width;
+}
+
+.task-card__time-label {
+  font-size: $font-size-small;
+  color: $color-text-light;
+  margin-bottom: $spacing-extra-small;
+}
+
+.task-card__time {
+  font-size: $font-size-large;
+  color: $color-primary;
+  font-weight: $font-weight-bold;
+  font-family: $font-monospace;
+}
