@@ -1,13 +1,16 @@
 // 颜色变量
-$color-primary: #3498db; // 主色调，用于时间显示
+$color-primary: #3498db; // 主色调
 $color-text-main: #333333; // 主要文本色
 $color-text-light: #999999; // 辅助文本色
-$color-background-card: #ffffff; // 卡片背景色
+$color-background: #ffffff; //背景色
+$color-background-btn: #eeeeee; // 按钮背景色
+$color-background-card: #cde5f6; // 卡片背景色
 $color-shadow: rgba(0, 0, 0, 0.05); // 阴影颜色
 
 // 间距变量
 $spacing-base: 16px;
 $spacing-small: 12px;
+$spacing-large: 32px;
 $spacing-extra-small: 2px;
 
 // 尺寸变量
@@ -18,11 +21,13 @@ $font-family-base: "Helvetica Neue", Arial, sans-serif; // 基础字体
 $font-monospace: "Courier New", Courier, monospace; // 等宽字体
 
 $font-size-base: 32px; // 基础字体大小
-$font-size-small: 16px; // 小号字体大小
+$font-size-small: 24px; // 小号字体大小
 $font-size-large: 48px; // 大号字体大小
+$font-size-extra-large: 64px; // 超大号字体大小
 
 $font-weight-bold: 600; // 粗体字重
 $font-weight-normal: 400; // 正文字重
+$font-weight-thin: 200; // 细体字重
 
 // 圆角变量
 $border-radius-base: 8px;
@@ -31,3 +36,7 @@ $border-radius-large: 12px;
 
 // 阴影变量
 $box-shadow-base: 0 2px 8px $color-shadow;
+
+// 特殊尺寸
+$circle-size: 400px; // 定义圆圈大小，使用固定的像素值
+$btn-size: 140px;

@@ -1,0 +1,31 @@
+// 目前只对小程序重置，后续可根据需要调整
+view,
+text,
+button,
+input,
+textarea {
+  margin: 0;
+  padding: 0;
+}
+
+button {
+  background: none;
+  border: none;
+  outline: none;
+
+  &::after {
+    border: none;
+    content: none;
+  }
+
+  // 禁用状态
+  &[disabled] {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
+}
+
+input {
+  border: none;
+  outline: none;
+}

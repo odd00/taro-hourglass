@@ -5,6 +5,12 @@ export default defineAppConfig({
     "pages/todo/todo",
     "pages/chat/chat",
   ],
+  subPackages: [
+    {
+      root: "packages/timerPackage",
+      pages: ["pages/timer/timer"],
+    },
+  ],
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#fff",

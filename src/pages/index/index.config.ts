@@ -1,3 +1,3 @@
 export default definePageConfig({
-  navigationBarTitleText: "计时",
+  navigationBarTitleText: "所有计时",
 });

@@ -1,0 +1,30 @@
+.circle-button {
+  width: $btn-size;
+  height: $btn-size;
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: $btn-size; // 设置行高等于高度，辅助垂直居中
+
+  &:active {
+    transform: scale(0.99);
+  }
+
+  &--primary {
+    background-color: $color-background-btn;
+    box-shadow: 0 4px 10px rgba($color-primary, 0.4);
+  }
+
+  &--secondary {
+    background-color: $color-background-card;
+    opacity: 0.8;
+  }
+
+  &__icon {
+    width: 50%;
+    height: 50%;
+  }
+}

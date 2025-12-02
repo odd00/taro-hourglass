@@ -1,4 +1,5 @@
 import { View } from "@tarojs/components";
+import Taro from "@tarojs/taro";
 import TaskCard from "../../components/business/TaskCard";
 
 // 测试用数据列表，实际从后端获取
@@ -9,21 +10,26 @@ const mockTasks = [
 ];
 
 export default function Index() {
-  const handleCardClick = (id: number) => {
-    console.log(`点击了任务 ID: ${id}`);
-
-    // 实现跳转到任务详情页的逻辑
+  const handleCardClick = (
+    taskId: number,
+    taskName: string,
+    totalTime: number
+  ) => {
+    Taro.navigateTo({
+      url: `/packages/timerPackage/pages/timer/timer?name=${encodeURIComponent(
+        taskName
+      )}&time=${totalTime}&id=${taskId}`,
+    });
   };
 
   return (
-    <View style={{ padding: "10px" }}>
+    <View className="page-wrapper">
       {mockTasks.map((task) => (
         <TaskCard
-          key={task.id}
           taskId={task.id}
           taskName={task.name}
           totalTimeInSeconds={task.time}
-          onClick={handleCardClick}
+          onClick={() => handleCardClick(task.id, task.name, task.time)}
         />
       ))}
     </View>

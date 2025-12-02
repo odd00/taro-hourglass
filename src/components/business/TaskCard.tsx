@@ -1,25 +1,7 @@
 import { View, Text } from "@tarojs/components";
 import { FC } from "react";
 
-/**
- * 将总秒数格式化为 HH:MM:SS 格式
- * @param totalSeconds 总秒数
- * @returns 格式化后的时间字符串
- */
-
-const formatTime = (totalSeconds: number): string => {
-  // 确保输入是正整数
-  const seconds = Math.max(0, Math.floor(totalSeconds));
-
-  const hours = Math.floor(seconds / 3600);
-  const minutes = Math.floor((seconds % 3600) / 60);
-  const remainingSeconds = seconds % 60;
-
-  // 使用 padStart 确保始终显示两位数
-  const pad = (num: number) => num.toString().padStart(2, "0");
-
-  return `${pad(hours)}:${pad(minutes)}:${pad(remainingSeconds)}`;
-};
+import { formatTime } from "../../features/timer/timerFuncs";
 
 interface TaskCardProps {
   /** 任务的唯一ID */
@@ -32,7 +14,7 @@ interface TaskCardProps {
   totalTimeInSeconds: number;
 
   /** 点击卡片时的处理函数 */
-  onClick?: (taskId: number) => void;
+  onClick?: (taskId: number, taskName: string, totalTime: number) => void;
 }
 
 const TaskCard: FC<TaskCardProps> = ({
@@ -43,14 +25,11 @@ const TaskCard: FC<TaskCardProps> = ({
 }) => {
   const formattedTime = formatTime(totalTimeInSeconds);
 
-  const handleClick = () => {
-    if (onClick) {
-      onClick(taskId);
-    }
-  };
-
   return (
-    <View className="task-card" onClick={handleClick}>
+    <View
+      className="task-card"
+      onClick={() => onClick?.(taskId, taskName, totalTimeInSeconds)}
+    >
       {/* 任务名称 */}
       <Text className="task-card__name">{taskName}</Text>
 

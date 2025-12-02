@@ -1,0 +1,12 @@
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+
+  background-color: $color-background;
+
+  padding-left: $spacing-small;
+  padding-right: $spacing-small;
+
+  margin-left: $spacing-small;
+  margin-right: $spacing-small;
+}

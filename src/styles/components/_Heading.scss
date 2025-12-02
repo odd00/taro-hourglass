@@ -1,0 +1,12 @@
+.heading {
+  text-align: center;
+  padding: $spacing-large 0; // 上下边距
+  background-color: $color-background-card;
+
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base;
+  font-family: $font-family-base;
+  color: $color-text-main;
+
+  border-radius: $border-radius-large;
+}

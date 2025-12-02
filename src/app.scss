@@ -1,2 +1,11 @@
 @import "styles/abstracts/variables";
+
+@import "styles/base/reset";
+
+@import "styles/layout/page-wrapper";
+@import "styles/layout/button-wrapper";
+
 @import "styles/components/TaskCard";
+@import "styles/components/Heading";
+@import "styles/components/TimerCircle";
+@import "styles/components/CircleButton";

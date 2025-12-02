@@ -1,0 +1,53 @@
+// 1. 容器用于居中和布局
+.timer-circle-container {
+  // 确保圆形居中
+  display: flex;
+  justify-content: center;
+  margin: $spacing-large 0;
+  width: 100%;
+}
+
+// 2. 核心圆形
+.timer-circle {
+  min-width: $circle-size;
+  min-height: $circle-size;
+  border-radius: 50%;
+
+  // 外观
+  background-color: lighten($color-background-card, 5%); // 比卡片背景稍亮
+  border: 4px solid $color-primary; // 主色调边框
+  box-shadow: $box-shadow-base;
+
+  // 内部元素布局 (文本居中)
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__time {
+    //计时字体样式
+    font-family: $font-monospace;
+    font-size: $font-size-extra-large; // 超大字体
+    font-weight: $font-weight-thin;
+    color: $color-primary;
+    line-height: 1; // 确保数字不会被裁切
+  }
+
+  &__total-time {
+    // 累计时长样式
+    display: flex;
+    flex-direction: row; // 文本横向排列
+    margin-top: $spacing-small;
+
+    .label {
+      color: $color-text-light;
+      font-size: $font-size-small;
+      margin-right: $spacing-extra-small;
+    }
+    .value {
+      color: $color-text-main;
+      font-size: $font-size-small;
+    }
+  }
+}
