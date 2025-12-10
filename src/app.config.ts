@@ -10,6 +10,10 @@ export default defineAppConfig({
       root: "packages/timerPackage",
       pages: ["pages/timer/timer"],
     },
+    {
+      root: "packages/newTaskPackage",
+      pages: ["pages/newTask/newTask"],
+    },
   ],
   window: {
     backgroundTextStyle: "light",

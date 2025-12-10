@@ -23,6 +23,13 @@
     opacity: 0.8;
   }
 
+  &--fixed {
+    position: fixed;
+    bottom: $spacing-large * 5;
+    right: $spacing-large * 3;
+    z-index: 1000; // 确保在其他元素之上
+  }
+
   &__icon {
     width: 50%;
     height: 50%;

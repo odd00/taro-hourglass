@@ -1,11 +1,11 @@
 import { View, Text } from "@tarojs/components";
 import { FC } from "react";
 
-import { formatTime } from "../../features/timer/timerFuncs";
+import { formatTime } from "@/features/timer/timerFuncs";
 
 interface TaskCardProps {
   /** 任务的唯一ID */
-  taskId: number;
+  taskId: string;
 
   /** 任务的名称 */
   taskName: string;
@@ -14,7 +14,7 @@ interface TaskCardProps {
   totalTimeInSeconds: number;
 
   /** 点击卡片时的处理函数 */
-  onClick?: (taskId: number, taskName: string, totalTime: number) => void;
+  onClick?: (taskId: string, taskName: string, totalTime: number) => void;
 }
 
 const TaskCard: FC<TaskCardProps> = ({
